@@ -7,13 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO -->
-    <meta name="description" content="Portfolio of Dimitris Mourchoutas - web apps, distributed systems, and REST APIs. Built with PHP, MySQL, Java, Spring Boot, and more.">
-    <meta name="keywords" content="Dimitris Mourchoutas, software developer, portfolio, web apps, PHP, MySQL, Java, Spring Boot, distributed systems">
+    <meta name="description"
+        content="Portfolio of Dimitris Mourchoutas - web apps, distributed systems, and REST APIs. Built with PHP, MySQL, Java, Spring Boot, and more.">
+    <meta name="keywords"
+        content="Dimitris Mourchoutas, software developer, portfolio, web apps, PHP, MySQL, Java, Spring Boot, distributed systems">
     <meta name="author" content="Dimitris Mourchoutas">
 
     <!-- Open Graph (for social sharing) -->
     <meta property="og:title" content="Dimitris Mourchoutas">
-    <meta property="og:description" content="Full-stack web apps, distributed systems, and REST APIs with PHP, MySQL, Java & Spring Boot.">
+    <meta property="og:description"
+        content="Full-stack web apps, distributed systems, and REST APIs with PHP, MySQL, Java & Spring Boot.">
     <meta property="og:image" content="images/Preview.png">
     <!-- <meta property="og:url" content="https://your-portfolio-url.com"> -->
     <meta property="og:type" content="website">
@@ -149,7 +152,8 @@
                             <p class="stack">PHP • MySQL • JavaScript • HTML/CSS</p>
                             <div class="project-links">
                                 <a href="https://autoservicegarage.infinityfreeapp.com" target="_blank">🔗 Live Demo</a>
-                                <a href="https://github.com/DimitrisM42/AutoService-Garage" target="_blank">💻 GitHub</a>
+                                <a href="https://github.com/DimitrisM42/AutoService-Garage" target="_blank">💻
+                                    GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -185,7 +189,8 @@
                         <div class="project-overlay">
                             <p class="stack">Java • TCP Sockets</p>
                             <div class="project-links">
-                                <a href="https://github.com/DimitrisM42/tcp-socket-connection-project" target="_blank">💻GitHub</a>
+                                <a href="https://github.com/DimitrisM42/tcp-socket-connection-project"
+                                    target="_blank">💻GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -203,7 +208,8 @@
                         <div class="project-overlay">
                             <p class="stack">Java • Spring Boot • REST API • Hibernate</p>
                             <div class="project-links">
-                                <a href="https://github.com/DimitrisM42/SoftwareTechnology" target="_blank">💻 GitHub</a>
+                                <a href="https://github.com/DimitrisM42/SoftwareTechnology" target="_blank">💻
+                                    GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -237,201 +243,7 @@
     </section>
 
 
-    <script>
-
-
-        const nav = document.querySelector("nav");
-        const navLinks = document.querySelectorAll("nav a");
-        const sectionsAll = document.querySelectorAll("section");
-
-        const highlight = document.createElement("div");
-        highlight.classList.add("nav-highlight");
-        Object.assign(highlight.style, {
-            position: "absolute",
-            bottom: "0",
-            height: "3px",
-            width: "0",
-            background: "linear-gradient(90deg, #ff0099, #ff9e00, #ffbe0b)",
-            transition: "all 0.3s ease",
-            borderRadius: "2px"
-        });
-        nav.appendChild(highlight);
-
-        function moveHighlight(link) {
-            const rect = link.getBoundingClientRect();
-            const navRect = nav.getBoundingClientRect();
-            const width = rect.width;
-            const left = rect.left - navRect.left - 22;
-
-            highlight.style.width = `${width}px`;
-            highlight.style.transform = `translateX(${left}px)`;
-        }
-
-        function revealOnScroll() {
-            const triggerBottom = window.innerHeight * 0.85;
-            sectionsAll.forEach(sec => {
-                const rect = sec.getBoundingClientRect().top;
-                if (rect < triggerBottom) sec.classList.add("visible");
-            });
-        }
-
-
-        window.addEventListener("scroll", () => {
-            const scrollY = window.scrollY;
-
-
-            if (scrollY > 50) {
-                nav.classList.add("scrolled");
-            } else {
-                nav.classList.remove("scrolled");
-            }
-
-            let current = "";
-            sectionsAll.forEach(sec => {
-                const secTop = sec.offsetTop - 150;
-                if (scrollY >= secTop) current = sec.getAttribute("id");
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove("active");
-                if (link.getAttribute("href") === "#" + current) {
-                    link.classList.add("active");
-                    moveHighlight(link);
-                }
-            });
-
-            revealOnScroll();
-
-        });
-
-        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener("click", e => {
-                e.preventDefault();
-                const targetElement = document.querySelector(anchor.getAttribute("href"));
-                targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
-            });
-        });
-
-        navLinks.forEach(link => {
-            link.addEventListener("mouseenter", () => moveHighlight(link));
-            link.addEventListener("mouseleave", () => {
-                const activeLink = document.querySelector("nav a.active");
-                if (activeLink) moveHighlight(activeLink);
-            });
-        });
-
-        // Trigger για αρχή
-        revealOnScroll();
-
-
-
-
-        const typedText = document.getElementById("typed-text");
-
-        const phrases = [
-            "Web Developer",
-            "Software Engineer",
-            "Tech Enthusiast",
-        ];
-
-        let phraseIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-
-        function typeEffect() {
-            const currentPhrase = phrases[phraseIndex];
-
-            if (!isDeleting) {
-                // Γράψιμο χαρακτήρων
-                typedText.textContent = currentPhrase.slice(0, charIndex++);
-
-                if (charIndex > currentPhrase.length) {
-                    // Μόλις ολοκληρωθεί η φράση → pause
-                    isDeleting = true;
-                    setTimeout(typeEffect, 1800);
-                    return;
-                }
-            } else {
-                // Διαγραφή χαρακτήρων
-                typedText.textContent = currentPhrase.slice(0, charIndex--);
-
-                if (charIndex === 0) {
-                    // ΕΔΩ μόνο αλλάζουμε phraseIndex αφού έχει αδειάσει πλήρως
-                    isDeleting = false;
-                    phraseIndex = (phraseIndex + 1) % phrases.length;
-
-                    // Μικρό pause πριν αρχίσει το νέο
-                    setTimeout(typeEffect, 500);
-                    return;
-                }
-            }
-
-            const speed = isDeleting ? 50 : 100;
-            setTimeout(typeEffect, speed);
-        }
-
-        typeEffect();
-
-
-
-
-
-
-        const canvas = document.getElementById("code-bg");
-        const ctx = canvas.getContext("2d");
-
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        const codeChars = "<>_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*(){};/\\=";
-        const fontSize = 16;
-        const columns = canvas.width / fontSize;
-        const drops = Array(Math.floor(columns)).fill(1);
-
-        function drawMatrix() {
-            ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-            const gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
-            gradient.addColorStop(0, "#ff006e");
-            gradient.addColorStop(0.5, "#ff9e00");
-            gradient.addColorStop(1, "#ffbe0b");
-            ctx.fillStyle = gradient;
-            ctx.font = fontSize + "px monospace";
-
-            for (let i = 0; i < drops.length; i++) {
-                const text = codeChars[Math.floor(Math.random() * codeChars.length)];
-                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-                    drops[i] = 0;
-                }
-                drops[i]++;
-            }
-        }
-
-        setInterval(drawMatrix, 50);
-
-        window.addEventListener("resize", () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
-
-
-
-
-        // Tap Indicator
-        const tapIndicator = document.querySelector(".tap-indicator");
-        const projectsSection = document.querySelector("#projects");
-
-        window.addEventListener("scroll", () => {
-        const rect = projectsSection.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        if (rect < windowHeight * 0.8) {
-            tapIndicator.style.opacity = "1";
-        }
-        });
-
-
+    <script src="script.js">
     </script>
 
 </body>

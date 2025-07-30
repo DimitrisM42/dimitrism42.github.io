@@ -356,13 +356,6 @@ nav a:hover {
   }
 }
 
-/* Show only on mobile */
-@media (max-width: 768px) {
-  .tap-indicator {
-    display: block;
-  }
-}
-
 
 
 /*------------ Projects section --------------*/
@@ -553,18 +546,18 @@ nav a:hover {
   }
 }
 
-/* Icon styling */
+
 .social-btn i {
   font-size: 1.2rem;
 }
 
-/* Hover effect */
+
 .social-btn:hover {
   transform: translateY(-4px) scale(1.03);
   background: linear-gradient(135deg, #444, #222);
 }
 
-/* Specific hover gradients */
+
 .social-btn.email:hover {
   background: linear-gradient(135deg, #0072ff, #00c6ff);
 }
@@ -581,8 +574,22 @@ nav a:hover {
   background: linear-gradient(135deg, #333333, #24292e, #000000);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   
+  .skills-grid {
+    gap: 1rem;
+  }
+
+  .skill-card {
+    width: 120px;
+    height: 130px;
+  
+  }
+
+  .tap-indicator {
+    display: block;
+  }
+
   .social-btn.email {
     background: linear-gradient(135deg, #0072ff, #00c6ff);
   }
@@ -600,3 +607,40 @@ nav a:hover {
   }
   
 }
+
+
+
+
+
+
+/* Easter eggs */
+
+
+.emoji {
+  position: fixed;
+  top: -40px;
+  font-size: 1.6rem;
+  animation: fall linear forwards;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(650deg);
+    opacity: 0;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .emoji {
+    font-size: 1.2rem;
+  }
+}
+
+.monochrome-mode {
+  filter: grayscale(100%);
+}
+
+
