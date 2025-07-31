@@ -196,8 +196,6 @@ const nav = document.querySelector("nav");
 
         //easter eggs
 
-        console.log("%cHey curious developer!", "color: #ff9e00; font-size:16px; font-weight:bold;");
-
 
         //konami code
         const secret = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
