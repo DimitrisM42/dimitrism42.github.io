@@ -1,15 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>Dimitris Mourchoutas</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0d0d0d" />
 
-    <!-- SEO -->
     <meta
       name="description"
-      content="Portfolio of Dimitris Mourchoutas - web apps, distributed systems, and REST APIs. Built with PHP, MySQL, Java, Spring Boot, and more."
+      content="Portfolio of Dimitris Mourchoutas - full-stack web apps, distributed systems, REST APIs, and software projects built with PHP, MySQL, Java, Spring Boot, and JavaScript."
     />
     <meta
       name="keywords"
@@ -17,20 +17,15 @@
     />
     <meta name="author" content="Dimitris Mourchoutas" />
 
-    <!-- Open Graph (for social sharing) -->
     <meta property="og:title" content="Dimitris Mourchoutas" />
     <meta
       property="og:description"
-      content="Full-stack web apps, distributed systems, and REST APIs with PHP, MySQL, Java & Spring Boot."
+      content="Full-stack web apps, distributed systems, and REST APIs with PHP, MySQL, Java and Spring Boot."
     />
     <meta property="og:image" content="images/Preview.png" />
-    <!-- <meta property="og:url" content="https://your-portfolio-url.com"> -->
     <meta property="og:type" content="website" />
 
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png" />
-
-    <!-- Google Analytics -->
 
     <script
       async
@@ -42,7 +37,6 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-CPB3LMSKJ2");
     </script>
 
@@ -54,341 +48,492 @@
   </head>
 
   <body>
-    <nav>
-      <a href="#hero">Home</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <span class="nav-indicator" aria-hidden="true"></span>
+      <a href="#hero" class="active">
+        <i class="fa-solid fa-house" aria-hidden="true"></i>
+        <span>Home</span>
+      </a>
+      <a href="#about">
+        <i class="fa-solid fa-user-astronaut" aria-hidden="true"></i>
+        <span>About</span>
+      </a>
+      <a href="#skills">
+        <i class="fa-solid fa-code" aria-hidden="true"></i>
+        <span>Skills</span>
+      </a>
+      <a href="#projects">
+        <i class="fa-solid fa-folder-open" aria-hidden="true"></i>
+        <span>Projects</span>
+      </a>
+      <a href="#contact">
+        <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+        <span>Contact</span>
+      </a>
     </nav>
 
-    <section id="hero" class="hero">
-      <canvas id="code-bg"></canvas>
-      <h1>Hi, I'm Dimitris</h1>
-      <br />
-      <p>
-        <span id="typed-text"></span>
-        <span class="cursor">|</span>
-      </p>
+    <main>
+      <section id="hero" class="hero">
+        <canvas id="code-bg" aria-hidden="true"></canvas>
+        <div class="hero-content">
+          <p class="eyebrow">Full-stack developer</p>
+          <h1>Hi, I'm <span>Dimitris</span></h1>
+          <p class="hero-type">
+            <span id="typed-text"></span>
+            <span class="cursor">|</span>
+          </p>
+          <p class="hero-summary">
+            I build web apps, REST APIs, and distributed systems with a focus on
+            clean flows and practical architecture.
+          </p>
 
-      <div class="scroll-arrow">↓</div>
-    </section>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="btn btn-primary" href="#projects">
+              <i class="fa-solid fa-code-branch" aria-hidden="true"></i>
+              View Projects
+            </a>
+            <a class="btn btn-secondary" href="#contact">
+              <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+              Contact Me
+            </a>
+          </div>
 
-    <section id="skills" class="skills">
-      <h2>Skills & Technologies</h2>
-      <p>Tools & languages I use to build software</p>
+          <p class="secret-hint">
+            <i class="fa-solid fa-terminal" aria-hidden="true"></i>
+            Curious developers may find more than the source code.
+          </p>
 
-      <!-- Frontend -->
-      <h3>Frontend</h3>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-            alt="HTML"
-          />
-          <span>HTML</span>
-        </div>
-        <div class="skill-card">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-            alt="CSS"
-          />
-          <span>CSS</span>
-        </div>
-        <div class="skill-card">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-            alt="JS"
-          />
-          <span>JavaScript</span>
-        </div>
-      </div>
-
-      <!-- Backend -->
-      <h3>Backend</h3>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
-            alt="PHP"
-          />
-          <span>PHP</span>
-        </div>
-        <div class="skill-card">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
-            alt="Spring"
-          />
-          <span>Java Spring</span>
-        </div>
-        <div class="skill-card">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-            alt="MySQL"
-          />
-          <span>MySQL</span>
-        </div>
-      </div>
-
-      <!-- Programming Languages -->
-      <h3>Programming Languages</h3>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
-            alt="C"
-          />
-          <span>C</span>
-        </div>
-        <div class="skill-card">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
-            alt="C++"
-          />
-          <span>C++</span>
-        </div>
-        <div class="skill-card">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-            alt="Java"
-          />
-          <span>Java</span>
-        </div>
-      </div>
-
-      <!-- Tools -->
-      <h3>Tools</h3>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-            alt="Git"
-          />
-          <span>Git</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="projects">
-      <div class="container">
-        <h2>My Projects</h2>
-        <p>Here are some of my recent works</p>
-
-        <div class="tap-indicator">
-          <div class="pulse"></div>
-          <div class="pulse delay1"></div>
-          <i class="fa-regular fa-hand-pointer"></i>
+          <a
+            class="next-preview"
+            href="#about"
+            aria-label="Preview the about section"
+          >
+            <span>Next</span>
+            <strong>About Dimitris</strong>
+            <small>How I build, what I use, and where I'm headed.</small>
+          </a>
         </div>
 
-        <div class="projects-grid">
-          <div class="project-card">
-            <img
-              src="images/RetroByte.png"
-              alt="RetroByte e-commerce website preview"
-            />
-            <div class="project-content">
-              <h3>RetroByte</h3>
-              <p>
-                A retro-themed e-commerce website. Built with HTML, CSS,
-                JavaScript, and PHP, it features a fully functional multi-page
-                store with product listings and details, a responsive design,
-                and a pixel-art inspired aesthetic—plus a custom CMS for
-                managing products and orders.
-              </p>
+        <a class="scroll-arrow" href="#about" aria-label="Scroll to about">
+          <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+        </a>
+      </section>
 
-              <div class="project-overlay">
-                <p class="stack">PHP • MySQL • JavaScript • HTML/CSS</p>
+      <section id="about" class="about">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-kicker">About</p>
+            <h2>Software that feels usable before it feels clever.</h2>
+            <p>
+              I like building practical systems end to end: interfaces people
+              can understand, APIs that stay predictable, and backend logic that
+              can survive real workflows.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <article class="about-panel">
+              <h3>What I focus on</h3>
+              <ul class="about-list">
+                <li>
+                  <span>01</span>
+                  Designing clean user journeys for multi-page web apps.
+                </li>
+                <li>
+                  <span>02</span>
+                  Building PHP, MySQL, Java, and Spring Boot project backends.
+                </li>
+                <li>
+                  <span>03</span>
+                  Exploring networking, concurrency, and distributed systems.
+                </li>
+              </ul>
+            </article>
+
+            <div class="about-stats" aria-label="Portfolio summary">
+              <div>
+                <strong>6</strong>
+                <span>featured projects</span>
+              </div>
+              <div>
+                <strong>API</strong>
+                <span>REST endpoints, validation, and structured data</span>
+              </div>
+              <div>
+                <strong>3</strong>
+                <span>core stacks</span>
+              </div>
+              <div>
+                <strong>RMI</strong>
+                <span>networking and distributed-system projects</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="skills">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-kicker">Skills</p>
+            <h2>Skills &amp; Technologies</h2>
+            <p>Tools and languages I use to build software.</p>
+          </div>
+
+          <div class="skills-group">
+            <h3>Frontend</h3>
+            <div class="skills-grid">
+              <div class="skill-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                  alt="HTML"
+                />
+                <span>HTML</span>
+              </div>
+              <div class="skill-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                  alt="CSS"
+                />
+                <span>CSS</span>
+              </div>
+              <div class="skill-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                  alt="JavaScript"
+                />
+                <span>JavaScript</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <h3>Backend</h3>
+            <div class="skills-grid">
+              <div class="skill-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                  alt="PHP"
+                />
+                <span>PHP</span>
+              </div>
+              <div class="skill-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
+                  alt="Spring"
+                />
+                <span>Java Spring</span>
+              </div>
+              <div class="skill-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                  alt="MySQL"
+                />
+                <span>MySQL</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <h3>Programming Languages</h3>
+            <div class="skills-grid">
+              <div class="skill-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
+                  alt="C"
+                />
+                <span>C</span>
+              </div>
+              <div class="skill-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+                  alt="C++"
+                />
+                <span>C++</span>
+              </div>
+              <div class="skill-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                  alt="Java"
+                />
+                <span>Java</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <h3>Tools</h3>
+            <div class="skills-grid compact">
+              <div class="skill-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                  alt="Git"
+                />
+                <span>Git</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-kicker">Projects</p>
+            <h2>My Projects</h2>
+            <p>
+              Selected builds across web apps, APIs, and distributed systems.
+            </p>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card">
+              <img
+                src="images/RetroByte.png"
+                alt="RetroByte e-commerce website preview"
+                loading="lazy"
+              />
+              <div class="project-content">
+                <p class="stack">PHP / MySQL / JavaScript / HTML / CSS</p>
+                <h3>RetroByte</h3>
+                <p>
+                  A retro-themed e-commerce website with product listings,
+                  product details, responsive pages, and a custom CMS for
+                  managing products and orders.
+                </p>
                 <div class="project-links">
                   <a
                     href="https://retrobyte.infinityfreeapp.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >🔗 Live Demo</a
                   >
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    Live Demo
+                  </a>
                   <a
                     href="https://github.com/DimitrisM42/RetroByte"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >💻 GitHub</a
                   >
+                    <i class="fa-brands fa-github"></i>
+                    GitHub
+                  </a>
                 </div>
               </div>
-            </div>
-          </div>
+            </article>
 
-          <div class="project-card">
-            <img src="images/IEEE-Aegean-website.png" alt="AutoServiceGarage" />
-            <div class="project-content">
-              <h3>IEEE Aegean SB Website</h3>
-              <p>
-                Modern and minimal, glass-themed website for the IEEE Aegean
-                Student Branch, built to showcase events, board members and
-                general information with dynamic JSON-driven content.
-              </p>
-              <div class="project-overlay">
-                <p class="stack">PHP • JSON • JavaScript • HTML/CSS</p>
+            <article class="project-card">
+              <img
+                src="images/IEEE-Aegean-website.png"
+                alt="IEEE Aegean Student Branch website preview"
+                loading="lazy"
+              />
+              <div class="project-content">
+                <p class="stack">PHP / JSON / JavaScript / HTML / CSS</p>
+                <h3>IEEE Aegean SB Website</h3>
+                <p>
+                  A modern glass-themed website for the IEEE Aegean Student
+                  Branch, showcasing events, board members, and general
+                  information with JSON-driven content.
+                </p>
                 <div class="project-links">
-                  <a href="https://samosweb.aegean.gr/ieee" target="_blank"
-                    >🔗 Live Demo</a
+                  <a
+                    href="https://samosweb.aegean.gr/ieee"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    Live Demo
+                  </a>
                   <a
                     href="https://github.com/DimitrisM42/IEEE-Aegean-website"
                     target="_blank"
-                    >💻 GitHub</a
+                    rel="noopener noreferrer"
                   >
+                    <i class="fa-brands fa-github"></i>
+                    GitHub
+                  </a>
                 </div>
               </div>
-            </div>
-          </div>
+            </article>
 
-          <div class="project-card">
-            <img src="images/AutoServiceGarage.png" alt="AutoServiceGarage" />
-            <div class="project-content">
-              <h3>AutoService Garage</h3>
-              <p>
-                A full web application for managing an auto repair shop,
-                including appointments, job tracking, and customer management.
-              </p>
-              <div class="project-overlay">
-                <p class="stack">PHP • MySQL • JavaScript • HTML/CSS</p>
+            <article class="project-card">
+              <img
+                src="images/AutoServiceGarage.png"
+                alt="AutoService Garage web app preview"
+                loading="lazy"
+              />
+              <div class="project-content">
+                <p class="stack">PHP / MySQL / JavaScript / HTML / CSS</p>
+                <h3>AutoService Garage</h3>
+                <p>
+                  A full web application for managing an auto repair shop,
+                  including appointments, job tracking, and customer management.
+                </p>
                 <div class="project-links">
                   <a
                     href="https://autoservicegarage.infinityfreeapp.com"
                     target="_blank"
-                    >🔗 Live Demo</a
+                    rel="noopener noreferrer"
                   >
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    Live Demo
+                  </a>
                   <a
                     href="https://github.com/DimitrisM42/AutoService-Garage"
                     target="_blank"
-                    >💻 GitHub</a
+                    rel="noopener noreferrer"
                   >
+                    <i class="fa-brands fa-github"></i>
+                    GitHub
+                  </a>
                 </div>
               </div>
-            </div>
-          </div>
+            </article>
 
-          <div class="project-card">
-            <img
-              src="images/JavaRmi.png"
-              alt="Distributed Ticket Booking System"
-            />
-            <div class="project-content">
-              <h3>Distributed Ticket Booking System</h3>
-              <p>
-                A distributed ticket booking platform built using Java RMI and
-                TCP sockets. Supports user roles, event management, real-time
-                reservations, and callback-based discounts.
-              </p>
-              <div class="project-overlay">
-                <p class="stack">Java • RMI • TCP Sockets</p>
+            <article class="project-card">
+              <img
+                src="images/JavaRmi.png"
+                alt="Distributed Ticket Booking System preview"
+                loading="lazy"
+              />
+              <div class="project-content">
+                <p class="stack">Java / RMI / TCP Sockets</p>
+                <h3>Distributed Ticket Booking System</h3>
+                <p>
+                  A distributed ticket booking platform using Java RMI and TCP
+                  sockets with user roles, event management, reservations, and
+                  callback-based discounts.
+                </p>
                 <div class="project-links">
                   <a
                     href="https://github.com/DimitrisM42/Java-rmi-project"
                     target="_blank"
-                    >💻 GitHub</a
+                    rel="noopener noreferrer"
                   >
+                    <i class="fa-brands fa-github"></i>
+                    GitHub
+                  </a>
                 </div>
               </div>
-            </div>
-          </div>
+            </article>
 
-          <div class="project-card">
-            <img
-              src="images/AlbumManager.png"
-              alt="Distributed Music Library"
-            />
-            <div class="project-content">
-              <h3>Distributed Music Library</h3>
-              <p>
-                A Java client-server application simulating a distributed
-                digital music library with TCP socket communication. Designed
-                for learning networking, concurrency, and streaming data.
-              </p>
-              <div class="project-overlay">
-                <p class="stack">Java • TCP Sockets</p>
+            <article class="project-card">
+              <img
+                src="images/AlbumManager.png"
+                alt="Distributed Music Library preview"
+                loading="lazy"
+              />
+              <div class="project-content">
+                <p class="stack">Java / TCP Sockets</p>
+                <h3>Distributed Music Library</h3>
+                <p>
+                  A Java client-server application simulating a distributed
+                  digital music library with TCP socket communication,
+                  concurrency, and streaming data.
+                </p>
                 <div class="project-links">
                   <a
                     href="https://github.com/DimitrisM42/tcp-socket-connection-project"
                     target="_blank"
-                    >💻GitHub</a
+                    rel="noopener noreferrer"
                   >
+                    <i class="fa-brands fa-github"></i>
+                    GitHub
+                  </a>
                 </div>
               </div>
-            </div>
-          </div>
+            </article>
 
-          <div class="project-card">
-            <img src="images/SoftwareTech.png" alt="Spring Boot Festival API" />
-            <div class="project-content">
-              <h3>Festival Management REST API</h3>
-              <p>
-                A RESTful backend service built with Spring Boot for managing
-                festivals, performances, and reservations. Provides CRUD
-                operations, JSON responses, input validation, and structured
-                error handling. Designed as part of a Software Technology
-                course.
-              </p>
-              <div class="project-overlay">
-                <p class="stack">Java • Spring Boot • REST API • Hibernate</p>
+            <article class="project-card">
+              <img
+                src="images/SoftwareTech.png"
+                alt="Spring Boot Festival Management REST API preview"
+                loading="lazy"
+              />
+              <div class="project-content">
+                <p class="stack">Java / Spring Boot / REST API / Hibernate</p>
+                <h3>Festival Management REST API</h3>
+                <p>
+                  A RESTful backend service for managing festivals,
+                  performances, and reservations with CRUD operations,
+                  validation, and structured error handling.
+                </p>
                 <div class="project-links">
                   <a
                     href="https://github.com/DimitrisM42/SoftwareTechnology"
                     target="_blank"
-                    >💻 GitHub</a
+                    rel="noopener noreferrer"
                   >
+                    <i class="fa-brands fa-github"></i>
+                    GitHub
+                  </a>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <div class="section-divider"></div>
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-kicker">Contact</p>
+            <h2>Let's Connect</h2>
+            <p>
+              Reach out by email, check out the code, or connect with me on the
+              platforms where I share and build.
+            </p>
+          </div>
 
-    <section id="contact" class="contact">
-      <h2>Let’s Connect</h2>
-      <p>
-        Feel free to reach out via email or connect with me on social media.
-      </p>
-
-      <div class="social-links">
-        <a
-          href="mailto:dimitmourh@gmail.com"
-          target="_blank"
-          class="social-btn email"
-        >
-          <i class="fas fa-envelope"></i> Email
-        </a>
-        <a
-          href="https://www.instagram.com/dimitmour_"
-          target="_blank"
-          class="social-btn instagram"
-        >
-          <i class="fab fa-instagram"></i> Instagram
-        </a>
-        <a
-          href="https://www.linkedin.com/in/dimitrios-mourchoutas"
-          target="_blank"
-          class="social-btn linkedin"
-        >
-          <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-        <a
-          href="https://github.com/DimitrisM42"
-          target="_blank"
-          class="social-btn github"
-        >
-          <i class="fab fa-github"></i> GitHub
-        </a>
-      </div>
-    </section>
+          <div class="social-links">
+            <a
+              href="mailto:dimitmourh@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-btn email"
+            >
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <span>Email</span>
+            </a>
+            <a
+              href="https://www.instagram.com/dimitmour_"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-btn instagram"
+            >
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+              <span>Instagram</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/dimitrios-mourchoutas"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-btn linkedin"
+            >
+              <i class="fab fa-linkedin" aria-hidden="true"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a
+              href="https://github.com/DimitrisM42"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-btn github"
+            >
+              <i class="fab fa-github" aria-hidden="true"></i>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <script src="script.js"></script>
 
     <script>
       console.log(
         "%cHey curious developer!",
-        "color: #ff9e00; font-size:16px; font-weight:bold;"
+        "color: #ff9e00; font-size:16px; font-weight:bold;",
       );
     </script>
   </body>
