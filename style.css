@@ -987,8 +987,8 @@ section > .container {
 
   .site-nav {
     top: 10px;
-    width: calc(100% - 1rem);
-    max-width: 520px;
+    width: min(calc(100% - 2rem), 470px);
+    max-width: 470px;
     justify-content: space-between;
     gap: 0;
   }
@@ -996,13 +996,18 @@ section > .container {
   .site-nav a {
     min-height: 2.36rem;
     flex: 1 1 0;
-    gap: 0;
-    padding: 0 0.42rem;
-    font-size: 0.8rem;
+    gap: 0.24rem;
+    padding: 0 0.32rem;
+    font-size: 0.78rem;
   }
 
   .site-nav a i {
-    display: none;
+    display: inline-block;
+    font-size: 0.82rem;
+  }
+
+  section:not(.hero) > .container {
+    width: min(calc(100% - 2.5rem), 560px);
   }
 
   .hero {
@@ -1071,13 +1076,22 @@ section > .container {
 }
 
 @media (max-width: 440px) {
-  .container,
   .hero-content {
     width: min(100% - 1rem, 1160px);
   }
 
+  section:not(.hero) > .container {
+    width: min(calc(100% - 2.25rem), 360px);
+  }
+
   .site-nav a {
-    font-size: 0.74rem;
+    gap: 0.18rem;
+    padding: 0 0.2rem;
+    font-size: 0.68rem;
+  }
+
+  .site-nav a i {
+    font-size: 0.76rem;
   }
 
   .hero-actions .btn,

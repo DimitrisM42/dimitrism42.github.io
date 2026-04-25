@@ -97,7 +97,6 @@ const phrases = [
   "Web Developer",
   "Software Engineer",
   "API Builder",
-  "Distributed Systems Learner",
 ];
 
 let phraseIndex = 0;
