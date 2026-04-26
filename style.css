@@ -1006,7 +1006,8 @@ section > .container {
     font-size: 0.82rem;
   }
 
-  section:not(.hero) > .container {
+  section:not(.hero) > .container,
+  .hero-content {
     width: min(calc(100% - 2.5rem), 560px);
   }
 
@@ -1076,10 +1077,7 @@ section > .container {
 }
 
 @media (max-width: 440px) {
-  .hero-content {
-    width: min(100% - 1rem, 1160px);
-  }
-
+  .hero-content,
   section:not(.hero) > .container {
     width: min(calc(100% - 2.25rem), 360px);
   }
