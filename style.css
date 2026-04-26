@@ -1064,7 +1064,8 @@ section > .container {
   }
 
   .skills-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.65rem;
   }
 
   .skills-grid.compact {
@@ -1072,7 +1073,19 @@ section > .container {
   }
 
   .skill-card {
-    min-height: 132px;
+    min-height: 112px;
+    padding: 0.9rem 0.5rem;
+  }
+
+  .skill-card img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .skill-card span {
+    font-size: 0.78rem;
+    line-height: 1.2;
+    text-align: center;
   }
 }
 
@@ -1102,7 +1115,22 @@ section > .container {
   }
 
   .skills-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.55rem;
+  }
+
+  .skill-card {
+    min-height: 96px;
+    padding: 0.7rem 0.35rem;
+  }
+
+  .skill-card img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .skill-card span {
+    font-size: 0.67rem;
   }
 }
 
