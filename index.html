@@ -22,32 +22,32 @@
       property="og:description"
       content="Modern web apps, REST APIs, and practical software projects with PHP, MySQL, Java and Spring Boot."
     />
-    <meta property="og:image" content="images/Preview.png" />
+    <meta property="og:image" content="https://dimitrism42.github.io/images/preview-social.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="712" />
+    <meta property="og:image:alt" content="Dimitris Mourchoutas — developer portfolio" />
+    <meta property="og:url" content="https://dimitrism42.github.io/" />
+    <link rel="canonical" href="https://dimitrism42.github.io/" />
     <meta property="og:type" content="website" />
 
-    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="icon" type="image/png" href="images/favicon-64.png" sizes="64x64" />
 
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-CPB3LMSKJ2"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-CPB3LMSKJ2");
-    </script>
+
 
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="experience.css" />
+    <link rel="stylesheet" href="journey.css" />
+    <link rel="stylesheet" href="secrets.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="/privacy.css" />
+    <script defer src="/privacy.js"></script>
   </head>
 
   <body>
+    <a class="skip-link" href="#about">Skip introduction</a>
     <nav class="site-nav" aria-label="Primary navigation">
       <span class="nav-indicator" aria-hidden="true"></span>
       <a href="#hero" class="active">
@@ -57,6 +57,10 @@
       <a href="#about">
         <i class="fa-solid fa-user-astronaut" aria-hidden="true"></i>
         <span>About</span>
+      </a>
+      <a href="#experience">
+        <i class="fa-solid fa-award" aria-hidden="true"></i>
+        <span>Experience</span>
       </a>
       <a href="#skills">
         <i class="fa-solid fa-code" aria-hidden="true"></i>
@@ -75,12 +79,14 @@
     <main>
       <section id="hero" class="hero">
         <canvas id="code-bg" aria-hidden="true"></canvas>
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="hero-layout">
         <div class="hero-content">
           <p class="eyebrow">Full-stack developer</p>
           <h1>Hi, I'm <span>Dimitris</span></h1>
-          <p class="hero-type">
-            <span id="typed-text"></span>
-            <span class="cursor">|</span>
+          <p class="hero-type" aria-label="Full-Stack Developer, Backend &amp; API Developer, and IoT &amp; Hardware Integration">
+            <span class="type-prompt" aria-hidden="true">&gt;_</span>
+            <span id="typed-text" aria-hidden="true">Full-Stack Developer</span><span class="type-cursor" aria-hidden="true">|</span>
           </p>
           <p class="hero-summary">
             I am a web developer and software engineer building clean,
@@ -114,6 +120,7 @@
           </a>
         </div>
 
+        </div>
         <a class="scroll-arrow" href="#about" aria-label="Scroll to about">
           <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
         </a>
@@ -121,54 +128,121 @@
 
       <section id="about" class="about">
         <div class="container">
-          <div class="section-header">
-            <p class="section-kicker">About</p>
-            <h2>Software that feels usable before it feels clever.</h2>
-            <p>
-              I like building practical systems end to end: interfaces people
-              can understand, APIs that stay predictable, and backend logic that
-              can survive real workflows.
-            </p>
-          </div>
-
-          <div class="about-grid">
-            <article class="about-panel">
-              <h3>What I focus on</h3>
-              <ul class="about-list">
-                <li>
-                  <span>01</span>
-                  Designing clean and user friendly interfaces.
-                </li>
-                <li>
-                  <span>02</span>
-                  Building beautiful and unique websites.
-                </li>
-                <li>
-                  <span>03</span>
-                  Learning new skills.
-                </li>
-              </ul>
-            </article>
-
-            <div class="about-stats" aria-label="Portfolio summary">
-              <div>
-                <strong>6</strong>
-                <span>featured projects</span>
+          <div class="about-story">
+            <div class="about-intro">
+              <div class="section-header">
+                <p class="section-kicker">About</p>
+                <h2>A little more<br>than the <span>code.</span></h2>
+                <p>I'm Dimitris, a developer who enjoys building both websites and complete software systems.</p>
               </div>
-              <div>
-                <strong>UI</strong>
-                <span>Clean interfaces that feel simple and easy to use.</span>
+              <p class="about-story-copy">I like understanding how everything fits together: what someone sees, what happens behind the scenes, and how the two connect. Working across those layers keeps me curious and gives me new things to figure out.</p>
+            </div>
+            <div class="about-notes" aria-label="My interests and approach to development">
+              <div class="about-note-slot">
+                <article class="about-note about-note-featured">
+                  <div class="about-note-kicker"><span>1 / HOW I THINK</span><i class="fas fa-layer-group" aria-hidden="true"></i></div>
+                  <h3>The whole picture</h3>
+                  <p>I'm interested in how the interface, the logic, and the data work together. Understanding those connections is part of what I enjoy about development.</p>
+                </article>
               </div>
-              <div>
-                <strong>STACK</strong>
-                <span>Frontend, backend, and database tools I use to build complete projects.</span>
+              <div class="about-note-slot">
+                <article class="about-note">
+                  <div class="about-note-kicker"><span>2 / WHAT I ENJOY</span><i class="fas fa-code" aria-hidden="true"></i></div>
+                  <h3>Something to figure out</h3>
+                  <p>I enjoy work with more moving parts: breaking a bigger problem down, making sense of the pieces, and bringing them together.</p>
+                </article>
               </div>
-              <div>
-                <strong>DEV</strong>
-                <span>Practical development across frontend and backend work.</span>
+              <div class="about-note-slot">
+                <article class="about-note">
+                  <div class="about-note-kicker"><span>3 / WHAT KEEPS ME CURIOUS</span><i class="fas fa-book-open" aria-hidden="true"></i></div>
+                  <h3>Going a little deeper</h3>
+                  <p>There's always more to learn, whether that means trying a new tool or digging into a topic beyond the code. That's also what excites me about the thesis ahead.</p>
+                </article>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id="experience" class="journey" aria-labelledby="journey-title">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-kicker">Experience</p>
+            <h2 id="journey-title">Along the <span>way.</span></h2>
+            <p>Learning, contributing, and showing up.</p>
+          </div>
+
+          <div class="journey-subheading"><span aria-hidden="true">1 /</span><h3>Education &amp; community</h3></div>
+          <ol class="journey-timeline" aria-label="My education and community roles">
+            <li class="journey-milestone">
+              <article class="journey-role journey-role-featured">
+                <p class="journey-date"><span class="journey-role-type">Volunteering</span><time datetime="2025-08">Aug 2025</time> – <time datetime="2026-08">Aug 2026</time></p>
+                <div class="journey-role-heading"><i class="fa-solid fa-users" aria-hidden="true"></i><div><h4>Webmaster</h4><p>IEEE · University of the Aegean</p></div></div>
+                <p class="journey-contribution">Web presence and digital support for the student community.</p>
+                <a class="journey-link" href="documents/certificates/ieee-webmaster.pdf" target="_blank" rel="noopener" data-document="ieee-webmaster">View recognition <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                <p class="journey-membership"><i class="fa-solid fa-id-badge" aria-hidden="true"></i> IEEE Student Member · October 2024 – August 2026</p>
+              </article>
+            </li>
+            <li class="journey-milestone">
+              <article class="journey-role">
+                <p class="journey-date"><span class="journey-role-type">Education</span><time datetime="2022-09">September 2022</time> – Present</p>
+                <div class="journey-role-heading"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i><div><h4>ICSD student</h4><p>University of the Aegean</p></div></div>
+                <p class="journey-contribution">Studying Information &amp; Communication Systems Engineering.</p>
+              </article>
+            </li>
+          </ol>
+
+          <div class="journey-subheading"><span aria-hidden="true">2 /</span><h3>Certificates &amp; learning</h3><a class="certificate-browse" href="#certificate-catalog">View all 6 <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a></div>
+          <div class="certificate-showcase" aria-label="Featured certificates">
+            <div class="certificate-copy">
+              <p class="certificate-position" aria-live="polite" aria-atomic="true">1 / 6 · Completion</p>
+              <h4 class="certificate-title">Digital Innovation &amp; Entrepreneurship</h4>
+              <p class="certificate-issuer">DIGIMPACT.EU · 18 Dec 2025</p>
+              <p class="certificate-description">50 learning hours in innovation, design thinking, and digital business.</p>
+              <a class="journey-link certificate-view" href="documents/certificates/digimpact-innovation.pdf" target="_blank" rel="noopener" data-document="digimpact-innovation">View certificate <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+              <div class="certificate-controls" hidden>
+                <button type="button" data-certificate-step="-1" aria-label="Previous certificate"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button>
+                <button type="button" data-certificate-step="1" aria-label="Next certificate"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+              </div>
+            </div>
+            <div class="certificate-visual">
+              <div class="certificate-deck" aria-label="Certificate previews">
+                <a class="certificate-sheet" data-deck-slot="0" data-document="digimpact-innovation" href="documents/certificates/digimpact-innovation.pdf" target="_blank" rel="noopener" aria-label="View Digital Innovation and Entrepreneurship certificate"><img src="images/certificates/digimpact-innovation-640.webp" width="1432" height="1012" alt="DIGIMPACT Digital Innovation and Entrepreneurship programme certificate" loading="lazy" decoding="async" /></a>
+                <a class="certificate-sheet" data-deck-slot="1" data-document="microsoft-ai-skills-fest" href="documents/certificates/microsoft-ai-skills-fest.pdf" target="_blank" rel="noopener" aria-label="View Microsoft AI Skills Fest participation certificate"><img src="images/certificates/microsoft-ai-skills-fest-640.webp" width="1347" height="1041" alt="Microsoft AI Skills Fest participation certificate" loading="lazy" decoding="async" /></a>
+                <a class="certificate-sheet" data-deck-slot="2" data-document="ieeextreme-18" href="documents/certificates/ieeextreme-18.pdf" target="_blank" rel="noopener" aria-label="View IEEEXtreme 18.0 participation certificate"><img src="images/certificates/ieeextreme-18-640.webp" width="1432" height="1012" alt="IEEEXtreme 18.0 programming competition participation certificate" loading="lazy" decoding="async" /></a>
+              </div>
+              <div class="certificate-selectors" aria-label="Select a featured certificate" hidden></div>
+            </div>
+          </div>
+
+          <details id="certificate-catalog" class="certificate-catalog">
+            <summary>Browse all 6 certificates <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></summary>
+            <div class="certificate-filters" aria-label="Filter certificates" hidden>
+              <button type="button" data-certificate-filter="all" aria-pressed="true">All <span>6</span></button>
+              <button type="button" data-certificate-filter="completion" aria-pressed="false">Learning <span>3</span></button>
+              <button type="button" data-certificate-filter="participation" aria-pressed="false">Participation <span>3</span></button>
+            </div>
+            <div class="certificate-grid">
+              <a class="certificate-item" href="documents/certificates/digimpact-innovation.pdf" target="_blank" rel="noopener" data-document="digimpact-innovation" data-kind="completion" data-title="Digital Innovation &amp; Entrepreneurship" data-issuer="DIGIMPACT.EU" data-date="18 Dec 2025" data-description="50 learning hours in innovation, design thinking, and digital business." data-short="DIGIMPACT">
+                <img src="images/certificates/digimpact-innovation-640.webp" width="1432" height="1012" alt="DIGIMPACT completion certificate" loading="lazy" decoding="async" /><span class="certificate-kind">Completion · 2025</span><h4>Digital Innovation &amp; Entrepreneurship</h4><p>DIGIMPACT.EU</p>
+              </a>
+              <a class="certificate-item" href="documents/certificates/microsoft-ai-skills-fest.pdf" target="_blank" rel="noopener" data-document="microsoft-ai-skills-fest" data-kind="participation" data-title="Microsoft AI Skills Fest" data-issuer="Microsoft" data-date="8 May 2025" data-description="Festival participation, recognised through Microsoft Learn." data-short="Microsoft AI Skills Fest">
+                <img src="images/certificates/microsoft-ai-skills-fest-640.webp" width="1347" height="1041" alt="Microsoft AI Skills Fest participation certificate" loading="lazy" decoding="async" /><span class="certificate-kind">Participation · 2025</span><h4>Microsoft AI Skills Fest</h4><p>Microsoft</p>
+              </a>
+              <a class="certificate-item" href="documents/certificates/ieeextreme-18.pdf" target="_blank" rel="noopener" data-document="ieeextreme-18" data-kind="participation" data-title="IEEEXtreme 18.0" data-issuer="IEEE" data-date="26 Oct 2024" data-description="Programming competition participation with team ComputingTeam." data-short="IEEEXtreme 18.0">
+                <img src="images/certificates/ieeextreme-18-640.webp" width="1432" height="1012" alt="IEEEXtreme 18.0 participation certificate" loading="lazy" decoding="async" /><span class="certificate-kind">Participation · 2024</span><h4>IEEEXtreme 18.0</h4><p>IEEE</p>
+              </a>
+              <a class="certificate-item" href="documents/certificates/cyber-security-challenge-2025.pdf" target="_blank" rel="noopener" data-document="cyber-security-challenge-2025" data-kind="participation" data-title="Cyber Security Challenge Greece" data-issuer="Cyber Security Challenge Greece" data-date="28 Mar 2025" data-description="Participated with The Breach Boys, earning 2,757 total points." data-short="Cyber Security Challenge">
+                <img src="images/certificates/cyber-security-challenge-2025-640.webp" width="1013" height="1432" alt="Cyber Security Challenge Greece 2025 participation certificate" loading="lazy" decoding="async" /><span class="certificate-kind">Participation · 2025</span><h4>Cyber Security Challenge Greece</h4><p>2025 · The Breach Boys</p>
+              </a>
+              <a class="certificate-item" href="documents/certificates/google-digital-marketing.pdf" target="_blank" rel="noopener" data-document="google-digital-marketing" data-kind="completion" data-title="Introduction to Digital Marketing" data-issuer="Grow with Google" data-date="8 Nov 2022" data-description="Attendance certificate for an introductory online seminar in digital marketing." data-short="Digital Marketing">
+                <img src="images/certificates/google-digital-marketing-640.webp" width="1432" height="1013" alt="Grow with Google digital marketing seminar certificate, in Greek" loading="lazy" decoding="async" /><span class="certificate-kind">Seminar · 2022</span><h4>Introduction to Digital Marketing</h4><p>Grow with Google</p>
+              </a>
+              <a class="certificate-item" href="documents/certificates/google-content-marketing.pdf" target="_blank" rel="noopener" data-document="google-content-marketing" data-kind="completion" data-title="Content Marketing Strategy" data-issuer="Grow with Google" data-date="8 Nov 2022" data-description="Attendance certificate for an online seminar on creating a content marketing strategy." data-short="Content Marketing">
+                <img src="images/certificates/google-content-marketing-640.webp" width="1432" height="1013" alt="Grow with Google content marketing strategy seminar certificate, in Greek" loading="lazy" decoding="async" /><span class="certificate-kind">Seminar · 2022</span><h4>Content Marketing Strategy</h4><p>Grow with Google</p>
+              </a>
+            </div>
+          </details>
         </div>
       </section>
 
@@ -178,32 +252,34 @@
             <p class="section-kicker">Skills</p>
             <h2>Skills &amp; Technologies</h2>
             <p>Tools and languages I use to build software.</p>
-            <div class="learning-badge" aria-label="Currently learning">
-              <span>Currently learning</span>
-              <strong>Docker</strong>
-              <strong>Kubernetes</strong>
-              <strong>PostgreSQL</strong>
-            </div>
           </div>
 
+          <div class="skills-layout">
+            <div class="skills-sculpture" role="img" aria-label="Four developer stack layers rising into steps: Frontend, Backend, Languages, and Tools.">
+              <div class="stack-fallback" aria-hidden="true">
+                <span>Frontend</span><span>Backend</span><span>Languages</span><span>Tools</span>
+              </div>
+            </div>
+          <div class="skills-board">
+          <div class="skills-plane">
           <div class="skills-group">
             <h3>Frontend</h3>
             <div class="skills-grid">
-              <div class="skill-card">
+              <div class="skill-card" tabindex="0">
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
                   alt="HTML"
                 />
                 <span>HTML</span>
               </div>
-              <div class="skill-card">
+              <div class="skill-card" tabindex="0">
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
                   alt="CSS"
                 />
                 <span>CSS</span>
               </div>
-              <div class="skill-card">
+              <div class="skill-card" tabindex="0">
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
                   alt="JavaScript"
@@ -212,32 +288,34 @@
               </div>
             </div>
           </div>
+          </div>
 
+          <div class="skills-plane">
           <div class="skills-group">
             <h3>Backend</h3>
             <div class="skills-grid">
-              <div class="skill-card">
+              <div class="skill-card" tabindex="0">
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
                   alt="PHP"
                 />
                 <span>PHP</span>
               </div>
-              <div class="skill-card">
+              <div class="skill-card" tabindex="0">
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
                   alt="Spring"
                 />
                 <span>Java Spring</span>
               </div>
-              <div class="skill-card">
+              <div class="skill-card" tabindex="0">
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
                   alt="MySQL"
                 />
                 <span>MySQL</span>
               </div>
-              <div class="skill-card">
+              <div class="skill-card" tabindex="0">
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
                   alt="PostgreSQL"
@@ -246,59 +324,75 @@
               </div>
             </div>
           </div>
+          </div>
 
+          <div class="skills-plane">
           <div class="skills-group">
             <h3>Programming Languages</h3>
             <div class="skills-grid">
-              <div class="skill-card">
+              <div class="skill-card" tabindex="0">
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
                   alt="C"
                 />
                 <span>C</span>
               </div>
-              <div class="skill-card">
+              <div class="skill-card" tabindex="0">
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
                   alt="C++"
                 />
                 <span>C++</span>
               </div>
-              <div class="skill-card">
+              <div class="skill-card" tabindex="0">
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
                   alt="Java"
                 />
                 <span>Java</span>
               </div>
+              <div class="skill-card" tabindex="0">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+                <span>Python</span>
+                <small class="skill-learning">Currently learning</small>
+              </div>
             </div>
           </div>
+          </div>
 
+          <div class="skills-plane">
           <div class="skills-group">
             <h3>Tools</h3>
             <div class="skills-grid">
-              <div class="skill-card">
+              <div class="skill-card" tabindex="0">
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
                   alt="Git"
                 />
                 <span>Git</span>
               </div>
-              <div class="skill-card">
+              <div class="skill-card" tabindex="0">
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
                   alt="Docker"
                 />
                 <span>Docker</span>
               </div>
-              <div class="skill-card">
+              <div class="skill-card" tabindex="0">
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
                   alt="Kubernetes"
                 />
                 <span>Kubernetes</span>
               </div>
+              <div class="skill-card" tabindex="0">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="Arduino" />
+                <span>ESP32 / Arduino</span>
+              </div>
             </div>
+          </div>
+          </div>
+          </div>
           </div>
         </div>
       </section>
@@ -307,16 +401,37 @@
         <div class="container">
           <div class="section-header">
             <p class="section-kicker">Projects</p>
-            <h2>My Projects</h2>
+            <h2>Selected projects.</h2>
             <p>
-              Some of my recent works
+              Websites, desktop applications, and the systems behind them.
             </p>
           </div>
 
           <div class="projects-grid">
-            <article class="project-card">
+            <article class="project-card" data-project="race-console" data-preview-label="Windows desktop app">
+              <img src="images/RaceConsole-800.webp" srcset="images/RaceConsole-800.webp 800w, images/RaceConsole.webp 1600w" sizes="(max-width: 720px) calc(100vw - 2rem), (max-width: 999px) 45vw, 350px" data-detail-src="images/RaceConsole.webp" width="800" height="500" alt="RACE CONSOLE Windows dashboard showing F1 telemetry, tyre condition, lap times, and track positions" loading="lazy" />
+              <div class="project-content">
+                <p class="stack">C# / .NET / WPF / UDP Telemetry</p>
+                <h3>RaceConsole</h3>
+                <p>A native Windows companion for F1 25, turning live UDP telemetry into race dashboards, timing, vehicle condition, and strategy views, with local recording and replay tools.</p>
+                <div class="project-links">
+                  <a href="https://race-console.dimitrism42.chatgpt.site" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> App Website</a>
+                  <a href="https://github.com/DimitrisM42/race-console-releases/releases" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-windows" aria-hidden="true"></i> Windows Releases</a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" data-project="sante-cafe-bar" data-preview-label="Cafeteria management system">
+              <img src="images/SanteCafeBar-800.webp" srcset="images/SanteCafeBar-800.webp 640w, images/SanteCafeBar.webp 1440w" sizes="(max-width: 720px) calc(100vw - 2rem), (max-width: 999px) 45vw, 350px" data-detail-src="images/SanteCafeBar.webp" width="640" height="800" alt="Sante Cafe Bar venue photograph" loading="lazy" />
+              <div class="project-content">
+                <p class="stack">PHP / JavaScript / ESP32 / Arduino / Network Printing</p>
+                <h3>SanteCafeBar</h3>
+                <p>A complete cafeteria management system with a CMS, staff accounts, shifts, deliveries, coupons, and connected order printing through an ESP32 and network printers.</p>
+                <div class="project-links"></div>
+              </div>
+            </article>
+            <article class="project-card" data-project="retrobyte">
               <img
-                src="images/RetroByte.png"
+                src="images/RetroByte-800.webp" srcset="images/RetroByte-800.webp 800w, images/RetroByte.webp 1920w" sizes="(max-width: 720px) calc(100vw - 2rem), (max-width: 999px) 45vw, 350px" data-detail-src="images/RetroByte.webp" width="800" height="496"
                 alt="RetroByte e-commerce website preview"
                 loading="lazy"
               />
@@ -334,7 +449,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                     Live Demo
                   </a>
                   <a
@@ -342,16 +457,16 @@
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
                     GitHub
                   </a>
                 </div>
               </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" data-project="ieee-aegean">
               <img
-                src="images/IEEE-Aegean-website.png"
+                src="images/IEEE-Aegean-website-800.webp" srcset="images/IEEE-Aegean-website-800.webp 800w, images/IEEE-Aegean-website.webp 1701w" sizes="(max-width: 720px) calc(100vw - 2rem), (max-width: 999px) 45vw, 350px" data-detail-src="images/IEEE-Aegean-website.webp" width="800" height="500"
                 alt="IEEE Aegean Student Branch website preview"
                 loading="lazy"
               />
@@ -369,7 +484,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                     Live Demo
                   </a>
                   <a
@@ -377,16 +492,16 @@
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
                     GitHub
                   </a>
                 </div>
               </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" data-project="autoservice-garage">
               <img
-                src="images/AutoServiceGarage.png"
+                src="images/AutoServiceGarage-800.webp" srcset="images/AutoServiceGarage-800.webp 800w, images/AutoServiceGarage.webp 1920w" sizes="(max-width: 720px) calc(100vw - 2rem), (max-width: 999px) 45vw, 350px" data-detail-src="images/AutoServiceGarage.webp" width="800" height="496"
                 alt="AutoService Garage web app preview"
                 loading="lazy"
               />
@@ -394,8 +509,9 @@
                 <p class="stack">PHP / MySQL / JavaScript / HTML / CSS</p>
                 <h3>AutoService Garage</h3>
                 <p>
-                  A full web application for managing an auto repair shop,
-                  including appointments, job tracking, and customer management.
+                  A garage management application with customer, secretary,
+                  and mechanic views for vehicle records, appointment booking,
+                  and itemised work entries with automatically calculated costs.
                 </p>
                 <div class="project-links">
                   <a
@@ -403,7 +519,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                     Live Demo
                   </a>
                   <a
@@ -411,16 +527,16 @@
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
                     GitHub
                   </a>
                 </div>
               </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" data-project="java-ticket-booking">
               <img
-                src="images/JavaRmi.png"
+                src="images/JavaRmi-800.webp" srcset="images/JavaRmi-800.webp 800w, images/JavaRmi.webp 972w" sizes="(max-width: 720px) calc(100vw - 2rem), (max-width: 999px) 45vw, 350px" data-detail-src="images/JavaRmi.webp" width="800" height="479"
                 alt="Java Ticket Booking System preview"
                 loading="lazy"
               />
@@ -438,16 +554,16 @@
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
                     GitHub
                   </a>
                 </div>
               </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" data-project="music-library">
               <img
-                src="images/AlbumManager.png"
+                src="images/AlbumManager-800.webp" srcset="images/AlbumManager-800.webp 800w, images/AlbumManager.webp 873w" sizes="(max-width: 720px) calc(100vw - 2rem), (max-width: 999px) 45vw, 350px" data-detail-src="images/AlbumManager.webp" width="800" height="523"
                 alt="Client-Server Music Library preview"
                 loading="lazy"
               />
@@ -465,16 +581,16 @@
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
                     GitHub
                   </a>
                 </div>
               </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" data-project="festival-api">
               <img
-                src="images/SoftwareTech.png"
+                src="images/SoftwareTech-800.webp" srcset="images/SoftwareTech-800.webp 800w, images/SoftwareTech.webp 1920w" sizes="(max-width: 720px) calc(100vw - 2rem), (max-width: 999px) 45vw, 350px" data-detail-src="images/SoftwareTech.webp" width="800" height="443"
                 alt="Spring Boot Festival Management REST API preview"
                 loading="lazy"
               />
@@ -492,76 +608,92 @@
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
                     GitHub
                   </a>
                 </div>
               </div>
             </article>
+
+
           </div>
         </div>
       </section>
 
       <section id="contact" class="contact">
         <div class="container">
-          <div class="contact-panel">
-            <div class="section-header">
-              <p class="section-kicker">Contact</p>
-              <h2>Let's build something useful.</h2>
-              <p>
-                Reach out by email, check out the code, or connect with me on the
-                platforms where I share and build.
-              </p>
+          <div class="contact-layout">
+            <div class="contact-copy">
+              <div class="section-header">
+                <p class="section-kicker">Contact</p>
+                <h2>Let's make<br>something<br><span>useful.</span></h2>
+                <p>Have an idea? I'd love to hear it.</p>
+              </div>
+              <p class="contact-invitation">A project, a collaboration, or a good conversation.<br>Let's see where it goes.</p>
+              <div class="contact-signoff"><span aria-hidden="true">&gt;_</span> Every connection starts with hello.</div>
             </div>
-
-            <div class="contact-note">
-              Open to projects, collaboration, and software ideas.
-            </div>
-
-            <div class="social-links">
-              <a
-                href="mailto:dimitmourh@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="social-btn email"
-              >
-                <i class="fas fa-envelope" aria-hidden="true"></i>
-                <span>Email</span>
-              </a>
-              <a
-                href="https://www.instagram.com/dimitmour_"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="social-btn instagram"
-              >
-                <i class="fab fa-instagram" aria-hidden="true"></i>
-                <span>Instagram</span>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/dimitrios-mourchoutas"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="social-btn linkedin"
-              >
-                <i class="fab fa-linkedin" aria-hidden="true"></i>
-                <span>LinkedIn</span>
-              </a>
-              <a
-                href="https://github.com/DimitrisM42"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="social-btn github"
-              >
-                <i class="fab fa-github" aria-hidden="true"></i>
-                <span>GitHub</span>
-              </a>
+            <div class="contact-network" aria-label="Ways to connect">
+              <svg class="contact-connections" aria-hidden="true" focusable="false"><path/><path/><path/></svg>
+              <span class="contact-node" aria-hidden="true"><i class="fas fa-paper-plane" aria-hidden="true"></i></span>
+<div class="contact-card-slot"><article class="connect-card connect-email">
+ <a class="connect-link" href="mailto:dimitmourh@gmail.com">
+ <span class="connect-icon"><i class="fas fa-envelope" aria-hidden="true"></i></span>
+ <span class="connect-text"><span class="connect-eyebrow">Start a conversation</span><strong>Email</strong><span class="connect-description">dimitmourh@gmail.com</span></span>
+ <span class="connect-arrow" aria-hidden="true">↗</span></a><button type="button" class="copy-email" hidden aria-label="Copy email address"><i class="far fa-copy" aria-hidden="true"></i><span>Copy email</span></button>
+ </article></div>
+<div class="contact-card-slot"><article class="connect-card ">
+ <a class="connect-link" href="https://github.com/DimitrisM42" target="_blank" rel="noopener noreferrer">
+ <span class="connect-icon"><i class="fab fa-github" aria-hidden="true"></i></span>
+ <span class="connect-text"><strong>GitHub</strong><span class="connect-description">Explore the code</span></span>
+ <span class="connect-arrow" aria-hidden="true">↗</span></a>
+ </article></div>
+<div class="contact-card-slot"><article class="connect-card ">
+ <a class="connect-link" href="https://www.linkedin.com/in/dimitrios-mourchoutas" target="_blank" rel="noopener noreferrer">
+ <span class="connect-icon"><i class="fab fa-linkedin-in" aria-hidden="true"></i></span>
+ <span class="connect-text"><strong>LinkedIn</strong><span class="connect-description">Let's connect</span></span>
+ <span class="connect-arrow" aria-hidden="true">↗</span></a>
+ </article></div>
+              <p class="contact-status" role="status" aria-live="polite"></p>
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <script src="script.js"></script>
+    <footer class="privacy-footer">
+      <span>© Dimitris Mourchoutas</span>
+      <nav aria-label="Privacy links">
+        <a href="/privacy.html">Privacy &amp; Cookies</a>
+        <button type="button" data-cookie-settings hidden>Cookie settings</button>
+      </nav>
+    </footer>
+
+
+    <dialog id="project-dialog" class="project-dialog" aria-labelledby="detail-title">
+      <button type="button" class="detail-close" aria-label="Close project details" autofocus>Close <span class="close-icon" aria-hidden="true"></span></button>
+      <div class="detail-image-wrap"><img id="detail-image" alt="" /></div>
+      <div class="detail-body">
+        <p class="stack" id="detail-stack"></p>
+        <h2 id="detail-title"></h2>
+        <p id="detail-summary"></p>
+        <div class="detail-columns">
+          <div><h3>Project goal</h3><p id="detail-problem"></p></div>
+          <div><h3>My contribution</h3><p id="detail-contribution"></p></div>
+        </div>
+        <h3>Key features</h3><ul id="detail-features"></ul>
+        <div class="project-links" id="detail-links"></div>
+      </div>
+    </dialog>
+    <dialog id="credential-dialog" class="credential-dialog" aria-labelledby="credential-title">
+      <header class="credential-header"><div><p id="credential-meta"></p><h2 id="credential-title"></h2></div><button class="credential-close" type="button" aria-label="Close certificate preview" autofocus><span class="close-icon" aria-hidden="true"></span></button></header>
+      <div class="credential-image-wrap"><img id="credential-image" alt="" /></div>
+      <footer class="credential-footer"><div class="credential-paging"><button type="button" data-credential-step="-1" aria-label="Previous certificate in preview"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button><span id="credential-count" aria-live="polite"></span><button type="button" data-credential-step="1" aria-label="Next certificate in preview"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button></div><a id="credential-pdf" target="_blank" rel="noopener">Open original PDF <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></footer>
+    </dialog>
+    <script defer src="vendor/gsap.min.js"></script>
+    <script defer src="vendor/ScrollTrigger.min.js"></script>
+    <script defer src="script.js"></script>
+    <script defer src="experience.js"></script>
+    <script defer src="hero.js"></script>
 
     <script>
       console.log(
@@ -569,5 +701,7 @@
         "color: #ff9e00; font-size:16px; font-weight:bold;",
       );
     </script>
+      <script type="module" src="showcase.js"></script>
+      <script type="module" src="journey.js"></script>
   </body>
 </html>

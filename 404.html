@@ -2,53 +2,31 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>404 - Page Not Found</title>
-
-    <!-- Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-CPB3LMSKJ2"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-CPB3LMSKJ2");
-    </script>
-
-    <style>
-      body {
-        background: #0d0d0d;
-        color: #fff;
-        font-family: "Poppins", sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        text-align: center;
-      }
-      h1 {
-        font-size: 4rem;
-        margin-bottom: 1rem;
-      }
-      p {
-        color: #aaa;
-        margin-bottom: 2rem;
-      }
-      a {
-        text-decoration: none;
-        color: #ff9e00;
-        font-weight: bold;
-      }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 · Dimitris Mourchoutas</title>
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#0d0d0d" />
+    <link rel="icon" href="/images/favicon-64.png" sizes="64x64" />
+    <link rel="stylesheet" href="/privacy.css" />
+    <link rel="stylesheet" href="/404.css" />
+    <script defer src="/privacy.js"></script>
   </head>
-  <body>
-    <h1>404</h1>
-    <p>Oops! The page you’re looking for doesn’t exist.</p>
-    <a href="index.html">← Go back to Home</a>
+  <body class="not-found-page">
+    <main class="not-found">
+      <div class="not-found-content">
+        <p class="not-found-kicker"><span aria-hidden="true">&gt;_</span> ROUTE_NOT_FOUND</p>
+        <div class="not-found-code" aria-hidden="true">404</div>
+        <h1><span class="sr-only">Page not found. </span>This page has gone off-script.</h1>
+        <p class="not-found-copy">Either the link is wrong, or your curiosity found a route I haven’t built yet.</p>
+        <a class="not-found-home" href="/"><span aria-hidden="true">←</span> Back to portfolio</a>
+      </div>
+    </main>
+    <footer class="privacy-footer">
+      <span>© Dimitris Mourchoutas</span>
+      <nav aria-label="Privacy links">
+        <a href="/privacy.html">Privacy &amp; Cookies</a>
+        <button type="button" data-cookie-settings hidden>Cookie settings</button>
+      </nav>
+    </footer>
   </body>
 </html>
