@@ -16,10 +16,10 @@
       (() => {
         const intro = window.portfolioIntro = { active: false, ready: Promise.resolve() };
         try {
-          const localPreview = ['localhost', '127.0.0.1', '[::1]'].includes(location.hostname);
+          const returning = performance.getEntriesByType('navigation')[0]?.type === 'back_forward';
           const seen = sessionStorage.getItem('portfolio-intro-seen') === '1';
           if (matchMedia('(prefers-reduced-motion: reduce)').matches ||
-              (!localPreview && seen)) return;
+              (returning && seen)) return;
           intro.remember = () => {
             try { sessionStorage.setItem('portfolio-intro-seen', '1'); }
             catch { /* A display preference is optional if storage becomes unavailable. */ }
@@ -39,7 +39,11 @@
               release();
             }
           };
-          intro.timeout = setTimeout(intro.finish, 2500);
+          // Network time must not consume the actual animation's 2.5s safety window.
+          intro.timeout = setTimeout(intro.finish, 12000);
+          document.addEventListener('DOMContentLoaded', () => {
+            if (!intro.started) intro.finish();
+          }, { once: true });
           document.documentElement.classList.add('intro-pending');
           window.addEventListener('pagehide', intro.finish, { once: true });
         } catch { /* Unavailable storage skips the introduction. */ }

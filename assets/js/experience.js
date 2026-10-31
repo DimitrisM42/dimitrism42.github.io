@@ -401,7 +401,22 @@
     observer.observe(document.querySelector(selector));
   }
   nearSection('#skills', () => import('./skills.js'));
-  nearSection('#projects', () => import('./gallery.js'));
+  // Warm the GPU between interactions, rather than compiling shaders during scroll.
+  const warmStack = () => {
+    const run = () => import('./skills.js').then(module => module.prepareStack()).catch(() => {});
+    if ('requestIdleCallback' in window) requestIdleCallback(run, { timeout: 2000 });
+    else setTimeout(run, 350);
+  };
+  const afterIntro = () => {
+    if (!window.portfolioIntro?.active) { warmStack(); return; }
+    const observer = new MutationObserver(() => {
+      if (!window.portfolioIntro.active) { observer.disconnect(); warmStack(); }
+    });
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+  };
+  if (document.readyState === 'complete') afterIntro();
+  else window.addEventListener('load', afterIntro, { once: true });
+  import('./gallery.js').catch(error => console.warn('Standard project cards:', error.message));
   nearSection('#contact', () => import('./contact.js'));
   nearSection('#about', () => import('./about.js'));
 })();

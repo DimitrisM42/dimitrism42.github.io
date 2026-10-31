@@ -20,12 +20,12 @@ const labels = names.map((name, i) => {
 host.append(labelLayer);
 const labelPoint = new THREE.Vector3();
 const labelOffset = new THREE.Vector3(.65, .15, .65);
-let renderer, scene, camera, entrance, frame = 0, visible = false;
+let renderer, scene, camera, entrance, frame = 0, visible = false, prepared = false;
 let layers = [], selected = 0, pinned = 0, failed = false;
 const view = { x: 0, y: 0 };
 
 function wake() {
-  if (!frame && renderer && visible && !document.hidden && !failed) frame = requestAnimationFrame(render);
+  if (!frame && renderer && prepared && visible && !document.hidden && !failed) frame = requestAnimationFrame(render);
 }
 function render() {
   frame = 0;
@@ -104,7 +104,7 @@ function roundedPlate(width, height, radius) {
   s.lineTo(x, y + radius); s.quadraticCurveTo(x, y, x + radius, y);
   return s;
 }
-function createSculpture() {
+async function createSculpture() {
   renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: 'low-power' });
   renderer.setPixelRatio(Math.min(devicePixelRatio, 1.75)); renderer.setClearColor(0x000000, 0);
   renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -138,7 +138,13 @@ function createSculpture() {
   renderer.domElement.addEventListener('webglcontextrestored', () => { failed = false; resize(); wake(); });
   resize();
   // Warm shaders while the section is still approaching, before its entrance.
-  renderer.compile(scene, camera);
+  await renderer.compileAsync(scene, camera);
+  // Shader compilation alone does not upload geometry buffers or allocate targets.
+  // Complete the first GPU draw before the stack enters the viewport.
+  await new Promise(resolve => requestAnimationFrame(resolve));
+  camera.position.set(7, 5.6, 7); camera.lookAt(0, 0, 0);
+  renderer.render(scene, camera);
+  prepared = true;
 }
 function resize() {
   if (!renderer) return;
@@ -172,14 +178,22 @@ function setupEntrance() {
   });
   select(selected, true); wake();
 }
+let preparation;
+export function prepareStack() {
+  if (preparation) return preparation;
+  preparation = (async () => {
+    try { await createSculpture(); }
+    catch (error) {
+      renderer?.dispose(); renderer = null; host.classList.remove('is-rendered'); console.warn('Static developer stack:', error.message);
+    }
+    setupEntrance();
+  })();
+  return preparation;
+}
 const loader = new IntersectionObserver(entries => {
   if (!entries[0].isIntersecting) return;
-  loader.disconnect();
-  try { createSculpture(); } catch (error) {
-    renderer?.dispose(); renderer = null; host.classList.remove('is-rendered'); console.warn('Static developer stack:', error.message);
-  }
-  setupEntrance();
-}, { rootMargin: '800px' }); loader.observe(layout);
+  loader.disconnect(); prepareStack();
+}, { rootMargin: '1800px' }); loader.observe(layout);
 const observer = new IntersectionObserver(entries => {
   visible = entries[0].isIntersecting;
   if (!visible) { cancelAnimationFrame(frame); frame = 0; } else wake();

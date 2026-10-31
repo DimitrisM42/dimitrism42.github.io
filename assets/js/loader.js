@@ -4,6 +4,9 @@
   if (!intro?.active) return;
   const overlay = document.querySelector('#site-intro');
   if (!overlay) { intro.finish(); return; }
+  intro.started = true;
+  clearTimeout(intro.timeout);
+  intro.timeout = setTimeout(intro.finish, 2500);
   overlay.hidden = false;
 
   const logo = overlay.querySelector('.intro-logo');
