@@ -7,16 +7,17 @@
     <meta name="theme-color" content="#0d0d0d" />
     <title>Privacy &amp; Cookies — Dimitris Mourchoutas</title>
     <meta name="description" content="How this portfolio uses optional analytics, remembers cookie choices, and handles visitor information." />
-    <link rel="icon" type="image/png" href="/images/favicon-64.png" sizes="64x64" />
-    <link rel="stylesheet" href="/privacy.css" />
-    <script defer src="/privacy.js"></script>
+    <link rel="icon" type="image/png" href="/assets/images/favicon-64.png" sizes="64x64" />
+    <link rel="stylesheet" href="/assets/css/fonts.css" />
+    <link rel="stylesheet" href="/assets/css/privacy.css" />
+    <script defer src="/assets/js/privacy.js"></script>
   </head>
   <body class="privacy-document">
     <main class="privacy-content">
       <a class="privacy-back" href="/">← Back to the portfolio</a>
       <p class="privacy-kicker">YOUR PRIVACY</p>
       <h1>Privacy &amp; Cookies</h1>
-      <p class="privacy-date">Last updated: 21 October 2026</p>
+      <p class="privacy-date">Last updated: 31 October 2026</p>
       <p>This is the personal portfolio of Dimitris Mourchoutas. It works without optional analytics. Google Analytics is loaded only if you choose “Accept analytics”; rejecting it does not limit access to the site.</p>
       <button type="button" class="privacy-settings" data-cookie-settings hidden>Manage cookie settings</button>
       <noscript><p>JavaScript is disabled, so optional analytics does not load and no consent choice is stored by this site.</p></noscript>
@@ -40,18 +41,19 @@
         <tbody>
           <tr><td><code>portfolio-cookie-consent</code></td><td>Local storage on this site. Remembers your choice; necessary to respect it.</td><td>180 days; the record is checked for expiry when a page loads.</td></tr>
           <tr><td><code>portfolio-secrets-progress</code></td><td>Session storage on this site. Remembers discovered Easter eggs after you interact with the game.</td><td>The current tab's session. Browser session restoration may restore it. You can clear it through your browser's site-data settings.</td></tr>
+          <tr><td><code>portfolio-intro-seen</code></td><td>Session storage on this site. Prevents the short introduction from replaying on reload or return visits in the same tab. This is a local display preference, not analytics.</td><td>The current tab's session. Browser session restoration may restore it.</td></tr>
           <tr><td><code>_ga</code>, <code>_ga_*</code></td><td>Optional Google Analytics cookies for visitor and session measurement, only after acceptance.</td><td>The site requests a 180-day expiry without automatic renewal on each visit. Your browser may shorten this period.</td></tr>
         </tbody>
       </table>
       <p>You can change your choice using “Cookie settings” in the footer. If you reject after accepting, this site disables the Analytics tag, removes accessible Analytics cookies for this site, and reloads the page to stop the loaded tag. Withdrawal stops future collection; it does not itself erase data already collected. You can also clear this site's data in your browser. If storage is unavailable, the choice applies to the current page and you may be asked again.</p>
 
       <h2>Other providers and external links</h2>
-      <p>Some technology icons are requested from jsDelivr, and the Font Awesome stylesheet and font files are requested from cdnjs. Those requests occur when the relevant resources load, independently of your Analytics choice, and disclose technical request information such as your IP address to their providers. Their purpose is to display the site's icons. See <a href="https://www.jsdelivr.com/terms/privacy-policy" rel="noopener noreferrer" target="_blank">jsDelivr's privacy policy</a> and <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener noreferrer" target="_blank">Cloudflare's privacy policy</a> for cdnjs.</p>
-      <p>GitHub, LinkedIn, Instagram, and project websites are ordinary outbound links, not embedded social widgets. Their own policies apply when you follow them. The email-copy button writes the displayed email address to your clipboard only when you press it.</p>
+      <p>Technology icons, icon fonts and typography are served locally with this portfolio through its hosting provider. Displaying them does not request resources from external icon or font CDNs.</p>
+      <p>GitHub, LinkedIn, and project websites are ordinary outbound links, not embedded social widgets. Their own policies apply when you follow them. The email-copy button writes the displayed email address to your clipboard only when you press it.</p>
       <p>Google Analytics is provided by Google. Google and other service providers may process data outside the European Economic Area. Information about their processing locations, transfer safeguards, and privacy practices is available in their policies, including <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Google's Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer" target="_blank">how Google uses information from partner sites</a>.</p>
 
       <h2>How long is information kept?</h2>
-      <p>The browser choice and configured Analytics cookie lifetimes are described above. Google Analytics is configured to retain event-level data for 14 months and user-level data for 2 months. Reset on new user activity is enabled, so new activity renews the user identifier's retention period. These settings are separate from cookie expiry and do not limit the retention of standard aggregated reports. Hosting and CDN log retention is managed by the respective providers under their policies.</p>
+      <p>The browser choice and configured Analytics cookie lifetimes are described above. Google Analytics is configured to retain event-level data for 14 months and user-level data for 2 months. Reset on new user activity is enabled, so new activity renews the user identifier's retention period. These settings are separate from cookie expiry and do not limit the retention of standard aggregated reports. Hosting log retention is managed by the respective providers under their policies.</p>
       <p>Email correspondence is kept for as long as needed to handle the enquiry and any resulting relationship, and longer only where necessary for legal obligations or the establishment, exercise, or defence of legal claims.</p>
 
       <h2>Your choices and rights</h2>

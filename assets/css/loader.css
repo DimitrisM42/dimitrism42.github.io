@@ -1,0 +1,114 @@
+/* The first-visit introduction shares the portfolio's existing mark and palette. */
+html.intro-pending {
+  overflow: hidden;
+  scrollbar-gutter: stable;
+}
+
+.site-intro {
+  color: #d6d6d6;
+  font-family: var(--sans, system-ui, sans-serif);
+  isolation: isolate;
+  opacity: 1;
+  transition: opacity 340ms ease;
+}
+
+.site-intro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(#ffffff06 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff06 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: radial-gradient(ellipse at center, #000, transparent 65%);
+}
+
+.intro-content {
+  display: grid;
+  justify-items: center;
+  padding: 1rem;
+  transform: translateY(-1rem);
+}
+
+.intro-mark {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: clamp(260px, 28vw, 336px);
+  aspect-ratio: 1;
+  margin-bottom: -3.1rem;
+}
+
+.intro-glyphs {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: .08em;
+  color: #ff9e00;
+  font-size: clamp(2.4rem, 5.6vw, 3.4rem);
+  font-family: var(--mono, ui-monospace, monospace);
+  font-weight: 600;
+  line-height: 1;
+  transition: opacity 200ms ease, transform 250ms ease;
+}
+
+.intro-glyphs span { display: inline-block; width: .65em; text-align: center; }
+.intro-glyphs span:nth-child(-n + 2) { color: #ff0099; }
+.intro-glyphs span:last-child { color: #ffbe0b; }
+
+.intro-logo {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: url(#logo-cutout);
+  opacity: 0;
+  transform: scale(.94);
+  transition: opacity 260ms ease, transform 420ms cubic-bezier(.2, .7, .2, 1);
+}
+
+.is-resolved .intro-glyphs { opacity: 0; transform: scale(1.06); }
+.is-resolved .intro-logo { opacity: 1; transform: scale(1); }
+
+.intro-terminal {
+  display: flex;
+  align-items: baseline;
+  gap: .5em;
+  min-height: 1.6em;
+  color: #bcbab6;
+  font-weight: 500;
+  letter-spacing: -.02em;
+  font-size: clamp(.88rem, 2.9vw, 1rem);
+  line-height: 1.6;
+  white-space: nowrap;
+}
+
+.intro-prompt { color: #ff0099; font-weight: 700; }
+.intro-caret { margin-left: -.4em; color: #ff9e00; }
+.site-intro.is-leaving { opacity: 0; pointer-events: none; }
+
+.intro-skip {
+  position: absolute;
+  bottom: max(1.5rem, env(safe-area-inset-bottom));
+  left: 50%;
+  padding: .65rem .9rem;
+  border: 1px solid #ffffff35;
+  border-radius: 3px;
+  background: #151617;
+  color: #e8e5df;
+  font: inherit;
+  font-size: .75rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+.intro-skip span { margin-left: .65rem; color: #ff9e00; }
+.intro-skip:focus-visible { opacity: 1; pointer-events: auto; outline: 2px solid #ff9e00; outline-offset: 4px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .site-intro, .intro-glyphs, .intro-logo { transition: none; }
+}

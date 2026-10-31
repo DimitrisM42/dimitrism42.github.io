@@ -1,0 +1,22 @@
+/* Shared, self-hosted variable font; one resource for the site and its ruler. */
+@font-face {
+  font-family: 'Navigator Archivo';
+  src: url('../vendor/archivo-latin.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-display: swap;
+}
+:root {
+  --sans: 'Navigator Archivo', ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+body { font-family: var(--sans); font-weight: 400; font-stretch: 100%; }
+h1, h2 { font-weight: 700; font-stretch: 112%; }
+h3, h4 { font-weight: 650; font-stretch: 105%; }
+button, input, select, textarea { font-family: inherit; }
+.btn, .project-links a { font-weight: 600; font-stretch: 102%; }
+/* Keep wide display lettering comfortable on the narrowest phone layouts. */
+@media (max-width: 480px) {
+  h1, h2 { font-stretch: 105%; }
+}
